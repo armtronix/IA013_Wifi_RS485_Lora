@@ -1,0 +1,4 @@
+esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 115200 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 80m --flash_size detect 0xe000 boot_app0.bin 0x1000 bootloader_dio_80m.bin 0x10000 Wifi_modbus_master_PMZ_16_v3.ino.bin 0x8000 Wifi_modbus_master_PMZ_16_v3.ino.partitions.bin
+
+//FOR Spiffs memory allocation....
+esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 115200 write_flash -z 0x00291000 Wifi_Bt_Esp32_Quad_Relay_Board_with_alexa.spiffs.bin
